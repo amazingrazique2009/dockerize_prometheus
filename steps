@@ -1,0 +1,14 @@
+sudo apt update
+curl -fsSL https://get.docker.com -o install-docker.sh
+# To run this script
+sh install-docker.sh
+sudo usermod -aG docker ubuntu
+newgrp docker
+# To clone the code from git
+git clone https://github.com/mubeen507/prometheus-grafana-app-monitoring.git
+# to build this apps we need to install docker-compose 
+sudo apt install docker-compose
+# goto to the file prometheus-grafana-app-monitoring.git
+cd prometheus-grafana-app-monitoring.git
+# build the app
+docker-compose up -d --build nodejs-application

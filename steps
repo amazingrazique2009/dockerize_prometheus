@@ -12,3 +12,25 @@ sudo apt install docker-compose
 cd prometheus-grafana-app-monitoring.git
 # build the app
 docker-compose up -d --build nodejs-application
+# Check the nodejs application running or not with ip address followed by port
+number 83 which is defined in docker compose file.
+# Nodejs Application Successfully running
+# From the docker-compose.yml file run the Prometheus container by using
+the below command
+docker-compose up -d prometheus
+# Check the Running containers #Check the Prometheus app from the Browser
+# Grafana server:
+# From the docker-compose.yml file run the Grafana container by the below
+command
+docker-compose up -d grafana
+# Grafana Dashboard:
+From the docker-compose.yml file run the Grafana dashboard container by
+the below command
+docker-compose up -d grafana-dashboards
+# Above dashboard represents the request per second which is hitting by
+incoming traffic to our Nodejs Application server
+# Now check the Application metrics on Grafana Dashboard:
+# Click on the Nodejs Application reload button number of times( for hitting
+application multiple times).
+# Now goto Grafana Dashboard will find the spikes( Gradually increase in
+spikes in dashboard)
